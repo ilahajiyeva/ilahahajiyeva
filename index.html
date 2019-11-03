@@ -6,620 +6,589 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="animate/animate.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Salsa&display=swap" rel="stylesheet">
+
     <style>
         body {
-            height: 100%;
-            font-family: Arial sans-serif;
+            margin: 0;
+            padding: 0;
         }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            word-spacing: 2px;
+            font-size: 40px;
+        }
+
+        .navbar-nav {
+            font-family: 'Salsa', cursive;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            text-decoration: none;
+            color: #0c5460 !important;
+        }
+
+        /*scroll nav*/
+        .background-nav {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .background-nav .navbar-brand {
+            font-size: 30px;
+        }
+
+        .masthead .carousel-inner {
+            height: 100vh;
+        }
+
+        .carousel-banner {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        .dropdown-item:hover, .dropdown-item:focus {
+            color: black !important;
+        }
+
+        .carousel-caption {
+            padding-bottom: 30px;
+        }
+
+        .carousel-caption h1 {
+            font-family: 'Salsa', cursive;
+            font-size: 70px;
+        }
+
+        .carousel-caption em {
+            font-size: 30px;
+        }
+
+        /*animated*/
         .animated {
             -webkit-animation-duration: 1s;
             animation-duration: 1s;
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
+
         @-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
 
-  50% {
-    opacity: 1;
-  }
-}
+            50% {
+                opacity: 1;
+            }
+        }
 
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
 
-  50% {
-    opacity: 1;
-  }
-}
+            50% {
+                opacity: 1;
+            }
+        }
 
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}@-webkit-keyframes zoomInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+        .zoomIn {
+            -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+        }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
+        @-webkit-keyframes zoomInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+                transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
 
-@keyframes zoomInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+                transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            }
+        }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
+        @keyframes zoomInRight {
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+                transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
 
-.zoomInRight {
-  -webkit-animation-name: zoomInRight;
-  animation-name: zoomInRight;
-}
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+                transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            }
+        }
+
+        .zoomInRight {
+            -webkit-animation-name: zoomInRight;
+            animation-name: zoomInRight;
+        }
 
         @-webkit-keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+                transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
 
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-@keyframes zoomInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
-
-.zoomInUp {
-  -webkit-animation-name: zoomInUp;
-  animation-name: zoomInUp;
-}
-
-        .masthead {
-            background-image: url("https://data.whicdn.com/images/325033866/original.jpg");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 700px;
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            }
         }
 
-        .fab:hover {
-            cursor: pointer;
+        @keyframes zoomInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+                transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            }
+
+            60% {
+                opacity: 1;
+                -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+                -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            }
+        }
+
+        .zoomInUp {
+            -webkit-animation-name: zoomInUp;
+            animation-name: zoomInUp;
+        }
+
+        /*about*/
+        .content-section-heading h2 {
+            font-family: 'Salsa', cursive;
+            font-size: 45px;
+        }
+
+        /*portdfolio*/
+        .pic {
+            transition: transform .5s;
+        }
+
+        .pic:hover {
             opacity: 0.7;
+            transform: scale(.5);
+        }
+        .image-caption {
+            font-family: 'Salsa', cursive;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: white;
+            opacity: 0;
+            transition: .5s;
+        }
+        .no-gutters:hover .image-caption {
+           opacity: 1;
+        }
+        .mt-4 {
+            margin-top: 2.5rem !important;
         }
 
-        .navbar {
-            background: transparent;
+        /*form*/
+        .submit {
+            box-shadow: 0 8px 6px 0 #040774;
+            outline: none;
         }
-        .background {
-            background: rgb(255, 255, 255,255);
+        .submit:active {
+            transform: translateY(4px);
         }
-        .masthead-heading {
-            padding-top: 100px;
+        .needs-validation, #signIn {
+            font-size: 20px;
+            font-family: 'Salsa', cursive;
         }
-        @font-face {
-  font-family: 'MASQUE__';
-  src: url('MASQUE__.eot');
-  src: url('MASQUE__.eot?#iefix') format('embedded-opentype'),
-       url('MASQUE__.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+        .fab:hover {
+            opacity: .8;
+        }
+        .modal {
+            font-family: 'Salsa', cursive;
+        }
 
-@font-face {
-  font-family: 'Masque';
-  src: url('Masque.svg#Masque') format('svg'),
-       url('Masque.ttf') format('truetype'),
-       url('Masque.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-        .masthead h1 {
-            font-family: 'Masque';
-        } 
+
     </style>
-
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
-<!--menu-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-
-    <a href="#" class="navbar-brand text-uppercase">Site Logo</a>
-    <i class="fas fa-sun fa-spin fa-2x"></i>
-
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ml-5">
-            <li class="nav-item">
-                <a href="#home" class="nav-link text-uppercase">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#about" class="nav-link text-uppercase">About Us</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle text-uppercase" data-toggle="dropdown">Projects</a>
-                <div class="dropdown-menu">
-                    <a href="#projects" class="dropdown-item active">Project A</a>
-                    <a href="#projects" class="dropdown-item">Project B</a>
-                    <a href="#projects" class="dropdown-item">Project C</a>
-                    <a href="#projects" class="dropdown-item">Project D</a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item disabled">Project E</a>
+<body data-spy="scroll" data-offset="50" data-target=".navbar">
+<!--header-->
+<header class="masthead">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top font-weight-bold">
+        <a href="#" class="navbar-brand ml-2 text-white">Site Logo
+            <i class="fas fa-sun fa-spin"></i>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav m-auto text-uppercase">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link text-white active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link text-white">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Portfolio</a>
+                    <div class="dropdown-menu bg-dark text-capitalize" style="box-shadow: 0 4px 8px black;">
+                        <a href="#portfolio" class="dropdown-item mt-2 text-white">Portfolio</a>
+                        <a href="#portfolio" class="dropdown-item mt-2 text-white">Portfolio</a>
+                        <a href="#portfolio" class="dropdown-item mt-2 text-white">Portfolio</a>
+                        <a href="#portfolio" class="dropdown-item mt-2 text-white">Portfolio</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item mt-2 disabled">Portfolio</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link text-white">Contact</a>
+                </li>
+            </ul>
+            <form action="#" class="mr-2">
+                <div class="input-group">
+                    <div>
+                        <input type="text" placeholder="Search..." id="filterSearch" class="form-control">
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary input-group-text" type="submit">
+                            <span><i class="fa fa-search"></i></span>
+                        </button>
+                    </div>
                 </div>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link text-uppercase">Contact</a>
-            </li>
-        </ul>
-        <form action="#" class="ml-auto">
-            <div class="input-group">
-                <div>
-                    <input type="text" placeholder="Search..." id="filterSearch" class="form-control">
+            </form>
+            <a href="#signIn" class="btn btn-info mr-3">Sign Up
+                <i class="fas fa-user-plus"></i>
+            </a>
+            <a href="#signUp" class="btn btn-info mr-3 active" data-toggle="modal">Sign In
+                <i class="fas fa-sign-in-alt"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    <!--carousel-->
+    <div class="container-fluid" id="home">
+        <div class="carousel slide carousel-fade" data-ride="carousel" id="carouselID">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-banner"
+                         style="background-image: url('https://data.whicdn.com/images/325033866/original.jpg')"></div>
                 </div>
-                <div class="input-group-append">
-                    <button class="btn btn-secondary input-group-text" type="submit">
-                        <span><i class="fa fa-search"></i></span>
-                    </button>
+                <div class="carousel-caption">
+                    <h1 class="text-white mb-3 animated zoomIn" style="animation-delay: .5s">Hello World</h1>
+                    <em class="text-white animated zoomInRight" style="animation-delay: 1s">Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.</em>
+                    <p>
+                        <a href="#about" class="btn btn-info btn-lg mt-5 animated zoomInUp p-3" style="animation-delay: 2s;">View
+                            More</a>
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner"
+                         style="background-image: url('https://data.whicdn.com/images/336837154/original.jpg');filter: hue-rotate(180deg);"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner"
+                         style="background-image: url('https://data.whicdn.com/images/336225242/original.jpg');filter: hue-rotate(180deg);"></div>
+
                 </div>
             </div>
-        </form>
-        <a href="#signUp" class="btn btn-info ml-auto">Sign Up
-            <i class="fas fa-user-plus"></i>
-        </a>
-        <a href="#logIn" class="btn btn-info ml-1" data-toggle="modal">Log In
-            <i class="fas fa-sign-in-alt"></i>
-        </a>
-    </div>
-</nav>
-
-<!--header-->
-<header class="masthead text-center  p-5" id="home">
-    <div class="container-fluid mt-5 align-items-center">
-        <h1 class="masthead-heading display-1 mb-5 mt-5 animated zoomIn" style="animation-delay: 0.5s">Hello World</h1>
-        <em class="text-muted mb-5 animated zoomInRight" style="animation-delay: 1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-            quo inventore
-            harum
-            ex magni, dicta impedit.</em>
-        <br>
-        <a href="#about" class="btn btn-light my-5 btn-lg animated zoomInUp" style="animation-delay: 1.5s">View More</a>
+            <a href="#carouselID" class="carousel-control-prev" data-slide="prev">
+                <i class="fas fa-chevron-left fa-6x"></i>
+            </a>
+            <a href="#carouselID" class="carousel-control-next" data-slide="next">
+                <i class="fas fa-chevron-right fa-6x"></i>
+            </a>
+        </div>
     </div>
 </header>
+
 <!--About-->
-<section class="content-section mt-4" id="about">
-    <div class="container-fluid">
-        <div class="content-section-heading text-center">
-            <h2>About Us</h2>
-            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4 offset-md-2 mt-0 border-right border-right border-secondary">
-                <span style='font-size:250px;'>&#128524;</span>
-            </div>
-            <div class="col-md-4 mt-5">
-                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-            </div>
-        </div>
-
-        <hr>
-        <div class="row mt-0">
-            <div class="col-md-4 offset-md-2 mt-5 border-right border-secondary">
-                <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-            </div>
-            <div class="col-md-5 offset-md-1">
-                <span style='font-size:250px;'>&#128530;</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--Projects-->
-<section class="content-section" id="projects">
-    <div class="container text-center mt-5">
-        <div class="content-section-heading">
-            <h2>Projects</h2>
-            <em class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-            <div class="row mt-4">
-                <!--first-->
-                <div class="col-md-4 mb-3">
-                    <div class="carousel slide carousel-fade" id="carouselID" data-ride="carousel" data-interval="500">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://sun9-17.userapi.com/c857136/v857136527/19845/RM0_eBJ1Os0.jpg"
-                                     alt="autumn" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-secondary">Project A</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun9-12.userapi.com/c852132/v852132536/1d796f/F49rkK_6ZOs.jpg"
-                                     alt="cup of coffee" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project B</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun1-94.userapi.com/c855532/v855532878/1311d1/f3XQ4AJw2n4.jpg"
-                                     alt="strawberry" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-danger">Project C</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun9-54.userapi.com/c850436/v850436233/1e437f/tN4L1QHnd3I.jpg"
-                                     alt="yummi" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project D</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <a href="#carouselID" class="carousel-control-prev" data-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </a>
-                            <a href="#carouselID" class="carousel-control-next" data-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--second-->
-                <div class="col-md-4 mb-3">
-                    <div class="carousel slide carousel-fade" id="carouselID1" data-ride="slide" data-interval="500" data-keyboard="true">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://sun1-94.userapi.com/c855532/v855532878/1311d1/f3XQ4AJw2n4.jpg"
-                                     alt="strawberry" class="d-block w-100 rounded-circle" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project A</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun9-54.userapi.com/c850436/v850436233/1e437f/tN4L1QHnd3I.jpg"
-                                     alt="yummi" class="d-block w-100 rounded-circle" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project B</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun9-12.userapi.com/c852132/v852132536/1d796f/F49rkK_6ZOs.jpg"
-                                     alt="cup of coffee" class="d-block w-100 rounded-circle" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project C</em>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#carouselID1" class="carousel-control-prev" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a href="#carouselID1" class="carousel-control-next" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-                <!--third-->
-                <div  class="col-md-4 mb-3">
-                    <div class="carousel slide carousel-fade" id="carouselID2" data-ride="slide" data-interval="1000">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="https://sun9-12.userapi.com/c852132/v852132536/1d796f/F49rkK_6ZOs.jpg"
-                                     alt="cup of coffee" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project D</em>
-                                    </h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://sun9-54.userapi.com/c850436/v850436233/1e437f/tN4L1QHnd3I.jpg"
-                                     alt="yummi" class="d-block w-100 rounded" height="300px">
-                                <div class="carousel-caption">
-                                    <h5 class="display-4">
-                                        <em class="text-white">Project E</em>
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" data-slide="prev" href="#carouselID2">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" data-slide="next" href="#carouselID2">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--Contact-->
-<section class="content-section bg-secondary text-white mt-5" id="contact">
+<section class="content-section mt-0 bg-light" id="about">
     <div class="container">
-        <div class="content-section-heading text-center mt-4">
-            <h2>Contact</h2>
-            <em class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
-        </div>
-        <form action="#" class="mt-3">
+        <div class="content-section-heading text-center p-2">
+            <h2>About</h2>
+            <em class="text-muted font-weight-bold lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
             <div class="row">
+                <div class="col-md-4 mt-0">
+                    <span style='font-size:300px;'>&#128522; </span>
+                </div>
+                <div class="col-md-8">
+                    <p class="text-monospace mt-5 p-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="text-monospace mt-5 p-5">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit
+                        amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit.Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <span style='font-size:300px;'>&#128524;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--portfolio-->
+<section class="content-section bg-warning text-center">
+    <div class="container" id="portfolio">
+        <div class="content-section-heading">
+            <h2 class="p-3">Portfolio</h2>
+            <em class="text-muted font-weight-bold lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+            <div class="row mt-5 no-gutters">
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email address" required>
-                    </div>
+                    <img src="https://data.whicdn.com/images/336914797/original.jpg" alt="cat"
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">1.Portfolio</h5>
                 </div>
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea class="form-control" id="message" rows="6" placeholder="Enter a message" required></textarea>
-                    </div>
+                    <img src="https://data.whicdn.com/images/336845832/original.jpg" alt="cat"
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">2.Portfolio</h5>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <img src="https://data.whicdn.com/images/334007800/original.jpg" alt="cat"
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">3.Portfolio</h5>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://data.whicdn.com/images/336878833/original.jpg" alt=""
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">4.Portfolio</h5>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6 mb-5">
+                    <img src="https://data.whicdn.com/images/335880285/original.jpg" alt="cat"
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">5.Portfolio</h5>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <img src="https://data.whicdn.com/images/335973554/original.jpg" alt="cat"
+                         class="d-flex w-100 rounded pic" style="height: 400px">
+                    <h5 class="image-caption">6.Portfolio</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--contact-->
+<section class="content-section bg-dark" id="contact">
+    <div class="container">
+        <div class="content-section-heading text-center p-5">
+            <h2 class="text-white">Contact</h2>
+            <em class="text-white-50 font-weight-bold lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
+        </div>
+        <form action="#" class="text-white needs-validation" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please enter your name.</div>
+
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name"  required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please enter your name.</div>
+
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please enter your email.</div>
+                </div>
+                <div class="col-md-6 mt-4 mb-5">
+                    <textarea class="form-control" rows="6" placeholder="Your Message..." id="message" required></textarea>
+                    <div class="valid-feedback"></div>
+                    <div class="invalid-feedback">Please enter a message.</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5 offset-md-5">
-                    <button type="submit" class="btn btn-primary btn-lg my-5">Send Message</button>
+                <div class="col-m-6 offset-md-5 mb-5 mt-3">
+                    <button type="submit" class="btn btn-info btn-lg px-4 submit">Send Message</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
 
-<!--Sign Up-->
-<section class="content-section bg-light" id="signUp">
+<!--sign up-->
+<section class="content-section bg-light" id="signIn">
     <div class="container">
-        <div class="content-section-heading">
-            <h2 class="text-center mb-3">Sign Up</h2>
+        <div class="content-section-heading p-5 text-center">
+            <h2 class="text-info">Sign Up</h2>
         </div>
-        <form action="#" novalidate class="needs-validation">
+        <form action="#" class="needs-validation" novalidate>
             <div class="row">
-                <div class="col-md-5 offset-md-3">
+                <div class="col-md-6 offset-md-3">
                     <div class="form-group">
                         <label for="first">First Name</label>
                         <input type="text" class="form-control" id="first" placeholder="First Name" required>
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Please enter your name.</div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5 offset-md-3">
                     <div class="form-group">
                         <label for="last">Last Name</label>
                         <input type="text" class="form-control" id="last" placeholder="Last Name" required>
                         <div class="valid-feedback"></div>
                         <div class="invalid-feedback">Please enter your name.</div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5 offset-md-3">
                     <div class="form-group">
-                        <label for="user">Username</label>
-                        <input type="text" class="form-control" id="user" placeholder="Username" required>
+                        <label for="email1">Email address</label>
+                        <input type="email" class="form-control" id="email1" placeholder="Email" required>
                         <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                        <div class="invalid-feedback">Please enter an email.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please enter password.</div>
                     </div>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-md-5 offset-md-3">
-                        <label>Gender</label><br>
-                        <div class="form-group custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="radio" class="custom-control-input" name="radio" value="1" required>
-                            <label class="custom-control-label" for="radio">Female</label>
-                        </div>
-                        <div class="form-group custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="radio1" class="custom-control-input" name="radio" value="0" required>
-                            <label class="custom-control-label" for="radio1">Male</label>
-                        </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <label>Gender</label><br>
+                    <div class="form-group custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="radio" value="1" id="female" required>
+                        <label class="custom-control-label" for="female">Female</label>
+                    </div>
+                    <div class="form-group custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="radio" value="0" id="male" required>
+                        <label class="custom-control-label" for="male">Male</label>
                     </div>
                 </div>
+            </div>
             <div class="row">
-                <div class="col-md-5 offset-md-3">
+                <div class="col-md-6 offset-md-3">
                     <label>Birthday</label>
                 </div>
-                <div class="col-md-4"></div>
             </div>
             <div class="row">
-                <div class="col-md-1 offset-md-3 mb-2">
-                    <select class="custom-select custom-select-sm" name="month">
-                        <option selected>Jan</option>
-                        <option>Feb</option>
-                        <option>Mar</option>
-                        <option>Apr</option>
-                        <option>May</option>
-                        <option>Jun</option>
-                        <option>Jul</option>
-                        <option>Aug</option>
-                        <option>Sep</option>
-                        <option>Oct</option>
-                        <option>Nov</option>
-                        <option>Dec</option>
-                    </select>
+                <div class="col-md-1 mt-1 offset-md-3">
+                    <div class="form-group">
+                        <input type="number" class="form-control form-control-sm" min="1" max="31" value="1">
+                    </div>
                 </div>
-                <div class="col-md-1 mb-2">
+                <div class="col-md-2 mt-0">
                     <select class="custom-select custom-select-sm">
-                        <option selected>01</option>
-                        <option>02</option>
-                        <option>03</option>
-                        <option>04</option>
-                        <option>05</option>
-                        <option>06</option>
-                        <option>07</option>
-                        <option>08</option>
-                        <option>09</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                        <option>20</option>
-                        <option>21</option>
-                        <option>22</option>
-                        <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
+                        <option>January</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
                     </select>
                 </div>
-                <div class="col-md-1 mb-2">
-                    <input type="number" class="form-control form-control-sm" max="2000" min="1950" value="1992">
+                <div class="col-md-1 mt-1">
+                    <div class="form-group">
+                        <input type="number" class="form-control form-control-sm" min="1960" max="2019" value="1992">
+                    </div>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-md-2 offset-md-3">
                     <label for="city">City</label>
-                    <input type="text" class="form-control form-control-sm" id="city" placeholder="City" required>
+                    <input type="text" class="form-control" id="city" placeholder="City" required>
                     <div class="valid-feedback"></div>
-                    <div class="invalid-feedback">Please enter your city.</div>
+                    <div class="invalid-feedback">Please enter city.</div>
                 </div>
                 <div class="col-md-2">
-                    <label for="country">Country</label>
-                    <input type="text" class="form-control form-control-sm" id="country" placeholder="Country" required>
+                    <label for="city">Country</label>
+                    <input type="text" class="form-control" id="Country" placeholder="Country" required>
                     <div class="valid-feedback"></div>
-                    <div class="invalid-feedback">Please enter your country.</div>
+                    <div class="invalid-feedback">Please enter country.</div>
                 </div>
-                <div class="col-md-1">
-                    <label for="zip">ZIP code</label>
-                    <input type="text" class="form-control form-control-sm" id="zip" required>
+                <div class="col-md-2">
+                    <label for="city">ZIP Code</label>
+                    <input type="text" class="form-control" id="zip" placeholder="ZIP Code" required>
                     <div class="valid-feedback"></div>
-                    <div class="invalid-feedback">Please enter ZIP code.</div>
+                    <div class="invalid-feedback">Please enter ZIP Code.</div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-5 offset-md-3">
-                    <div class="form-group">
-                        <label for="pass">Password</label>
-                        <input type="password" class="form-control" id="pass" placeholder="Password" required>
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Please enter your password.</div>
-                        <div id="demo"></div>
+            <div class="row mt-4 offset-md-3">
+                <div class="col-md-6">
+                    <div class="form-group custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="checkbox" name="checkbox" required>
+                        <label for="checkbox" class="custom-control-label">I read and agree.</label>
                     </div>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-md-5 offset-md-3">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="check2" name="customCheck" required>
-                        <label for="check2" class="custom-control-label">I read privacy policy & agree.</label>
-                        <div class="valid-feedback"></div>
-                        <div class="invalid-feedback">Please read privacy policy.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-3 mb-5">
-                <div class="col-md-5 offset-md-3">
-                    <button type="submit" class="btn btn-danger btn-block">Sign Up</button>
+                <div class="col-md-6 offset-md-3 mb-5">
+                    <button type="submit" class="btn btn-info btn-block">Sign In</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
 
-<!--log in-->
-<div class="modal" tabindex="-1" id="logIn">
+<!--sign in-->
+<div class="modal" tabindex="-1" id="signUp">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="modalTitle">Log In</h4>
+                <h4 class="modal-title">Sign In</h4>
                 <button class="close" type="button" data-dismiss="modal">
                     <span>&times;</span>
                 </button>
@@ -627,39 +596,51 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label form="email1" class="col-form-label">Email</label>
-                        <input type="email" class="form-control" id="email1" required>
+                        <label class="col-form-label" for="email2">Email</label>
+                        <input class="form-control" id="email2" type="email" required>
                     </div>
                     <div class="form-group">
-                        <label form="pass1" class="col-form-label">Password</label>
-                        <input type="password" class="form-control" id="pass1" required>
+                        <label class="col-form-label" for="password1">Password</label>
+                        <input type="password" id="password1" class="form-control" required>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" id="check">Remember me!
+                        </label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-info">Log In</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-info">Sign In</button>
             </div>
         </div>
     </div>
 </div>
 
+
 <!--footer-->
-<footer class="footer bg-dark text-white p-3 text-center">
-    <div class="container-fluid">
-        <span>&copy;2019</span>
-        <a href="#" class="ml-3">
-            <i class="fab fa-facebook-f" style="color: white"></i>
-        </a>
-        <a href="#" class="ml-3">
-            <i class="fab fa-twitter" style="color: white"></i>
-        </a>
-        <a href="#" class="ml-3">
-            <i class="fab fa-linkedin-in" style="color: white"></i>
-        </a>
-        <a href="#" class="text-white float-left">Privacy Policy</a>
-    </div>
+<footer class="footer bg-dark text-center text-white p-4">
+    <span class="mr-3">Copyright &copy;2019</span>
+    <a href="https://www.facebook.com" target="_blank">
+        <i class="fab fa-facebook-square fa-2x mr-1" style="color: #5db3f4"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram fa-2x mr-1" style="color: #e030a3"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+        <i class="fab fa-linkedin fa-2x mr-1" style="color: #1590bc"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank">
+        <i class="fab fa-twitter-square fa-2x mr-1" style="color: deepskyblue"></i>
+    </a>
+    <a href="https://www.gmail.com" target="_blank">
+        <i class="fab fa-google-plus-square fa-2x mr-1" style="color: red"></i>
+    </a>
 </footer>
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -670,34 +651,37 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 <script>
+    $(document).ready(function () {
+        $(".fa-caret-down").click(function () {
+            $(".caret-down").css("display", "block")
+        });
+    });
+    //    form-validate
     (function () {
         'use strict';
         window.addEventListener('load', function () {
             var forms = document.getElementsByClassName('needs-validation');
             var validation = Array.prototype.filter.call(forms, function (form) {
                 form.addEventListener('submit', function (e) {
-                   if (form.checkValidity() === false) {
-                       e.preventDefault();
-                       e.stopPropagation();
-                   }
-                   form.classList.add('was-validated');
-                }, false);
+                    if (form.checkValidity() === false) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                },false);
             });
         }, false);
     })();
 
+    //    navbar scroll
     $(window).on('scroll', function () {
-        if($(window).scrollTop()) {
-            $('.navbar').addClass("background");
-        }
-        else {
-            $('.navbar').removeClass("background");
+        if ($(window).scrollTop()) {
+            $('.navbar').addClass('background-nav');
+        } else {
+            $('.navbar').removeClass('background-nav');
         }
     });
-
-
 </script>
 </body>
 </html>
