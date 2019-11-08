@@ -198,7 +198,7 @@
 
         /*portdfolio*/
         .pic {
-            transition: transform .5s;
+            transition: transform .7s;
         }
 
         .pic:hover {
@@ -216,7 +216,7 @@
             opacity: 0;
             transition: .5s;
         }
-        .no-gutters:hover .image-caption {
+        .portfolio:hover .image-caption {
            opacity: 1;
         }
         .mt-4 {
@@ -234,7 +234,7 @@
         form input, textarea, select {
             box-shadow: 0 4px 8px 0 silver;
         }
-        
+
         .needs-validation, #signIn {
             font-size: 20px;
             font-family: 'Salsa', cursive;
@@ -385,42 +385,42 @@
 </section>
 
 <!--portfolio-->
-<section class="content-section bg-warning text-center">
-    <div class="container" id="portfolio">
+<section class="content-section bg-warning text-center" id="portfolio">
+    <div class="container">
         <div class="content-section-heading">
             <h2 class="p-3">Portfolio</h2>
             <em class="text-muted font-weight-bold lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</em>
             <div class="row mt-5 no-gutters">
-                <div class="col-md-6">
+                <div class="col-md-6 portfolio">
                     <img src="https://data.whicdn.com/images/336914797/original.jpg" alt="cat"
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">1.Portfolio</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 portfolio">
                     <img src="https://data.whicdn.com/images/336845832/original.jpg" alt="cat"
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">2.Portfolio</h5>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-md-6">
+                <div class="col-md-6 portfolio">
                     <img src="https://data.whicdn.com/images/334007800/original.jpg" alt="cat"
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">3.Portfolio</h5>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 portfolio">
                     <img src="https://data.whicdn.com/images/336878833/original.jpg" alt=""
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">4.Portfolio</h5>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-md-6 mb-5">
+                <div class="col-md-6 mb-5 portfolio">
                     <img src="https://data.whicdn.com/images/335880285/original.jpg" alt="cat"
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">5.Portfolio</h5>
                 </div>
-                <div class="col-md-6 mb-5">
+                <div class="col-md-6 mb-5 portfolio">
                     <img src="https://data.whicdn.com/images/335973554/original.jpg" alt="cat"
                          class="d-flex w-100 rounded pic" style="height: 400px">
                     <h5 class="image-caption">6.Portfolio</h5>
@@ -657,11 +657,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function () {
-        $(".fa-caret-down").click(function () {
-            $(".caret-down").css("display", "block")
-        });
-    });
     //    form-validate
     (function () {
         'use strict';
